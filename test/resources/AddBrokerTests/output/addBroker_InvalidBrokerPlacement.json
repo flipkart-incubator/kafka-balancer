@@ -1,0 +1,5 @@
+[
+  {
+    "errorMessage": "Replica assignment failed. Broker 1 already contains replica for partition 3"
+  }
+]

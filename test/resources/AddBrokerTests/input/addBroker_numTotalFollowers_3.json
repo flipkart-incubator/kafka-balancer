@@ -1,0 +1,60 @@
+{
+  "description": "3 Brokers 5 partitions 3 replicas - Add 2 more and Balance where broker 5 has less followers than broker 4 : Race for under utilized",
+  "partitionCount": 5,
+  "task": "RebalanceCluster",
+  "rackAware" : false,
+  "brokers": [
+    {
+      "id": 1,
+      "leaders": [
+        0,
+        3
+      ],
+      "followers": [
+        1,
+        2,
+        4
+      ]
+    },
+    {
+      "id": 2,
+      "leaders": [
+        1,
+        4
+      ],
+      "followers": [
+        0,
+        2,
+        3
+      ]
+    },
+    {
+      "id": 3,
+      "leaders": [
+      	2
+      ],
+      "followers": [
+        0,
+        1,
+        3,
+        4
+      ]
+    },
+    {
+      "id": 4,
+	  "numTotalFollowers" : 2,      
+      "leaders": [
+      ],
+      "followers": [
+      ]
+    },
+    {
+      "id": 5,
+	  "numTotalFollowers" : 1,      
+      "leaders": [	
+      ],
+      "followers": [
+      ]
+    }
+  ]
+}

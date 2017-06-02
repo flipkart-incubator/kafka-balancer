@@ -1,0 +1,12 @@
+testSuiteName: BalancerTestAddBrokers
+
+# baseDir's path starts from src/test/resources
+baseDir: AddBrokerTests
+
+description: Test cases for balancer with adding new brokers to the cluster
+
+# include only this test case
+#include:
+# - addBroker_simple_1.json
+# - addBroker_rack_1.json
+# - addBroker_numTotalLeaders_1.json

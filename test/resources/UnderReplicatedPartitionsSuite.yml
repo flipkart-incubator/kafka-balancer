@@ -1,0 +1,12 @@
+testSuiteName: ReassignUnderReplicatedPartitions
+
+# baseDir's path starts from src/test/resources
+baseDir: URPTests
+
+description: Test cases for reassignment logic of under replicated partitions
+
+# include only this test case
+#include:
+# - reassignURP_simple_1.json
+# - reassignURP_addBroker.json
+# - reassignURP_numTotalFollowers_1.json

@@ -1,0 +1,32 @@
+[{
+  "id": 1,
+  "leaders": [
+    0
+  ],
+  "followers": [
+    1,
+    2
+  ]
+}, {
+  "id": 2,
+  "leaders": [
+    1
+  ],
+  "followers": [
+    0,
+    2
+  ]
+}, {
+  "id": 3,
+  "leaders": [
+    2
+  ],
+  "followers": [
+    0,
+    1
+  ]
+}, {
+  "id": 4,
+  "leaders": [],
+  "followers": []
+}]

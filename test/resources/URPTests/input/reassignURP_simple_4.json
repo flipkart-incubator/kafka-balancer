@@ -1,0 +1,42 @@
+{
+  "description": "4 Brokers : 10 partitions : 6 UnderReplicated Replicas",
+  "partitionCount": 10,
+  "task": "ReassignUnderReplicatedPartitions",
+  "rackAware" : false,
+  "brokers": [{
+    "id": 1,
+    "leaders": [0, 5, 3],
+    "followers": [1, 6, 8]
+  }, {
+    "id": 2,
+    "leaders": [2, 7, 8],
+    "followers": [0, 3, 5]
+  }, {
+    "id": 3,
+    "leaders": [4, 9],
+    "followers": [0, 2, 5, 7]
+  }, {
+    "id": 4,
+    "leaders": [1, 6],
+    "followers": [2, 4, 7, 9]
+  }],
+  "underReplicatedPartitions": [{
+    "partition": 1,
+    "replicaDebt": 1
+  }, {
+    "partition": 3,
+    "replicaDebt": 1
+  }, {
+    "partition": 4,
+    "replicaDebt": 1
+  }, {
+    "partition": 6,
+    "replicaDebt": 1
+  }, {
+    "partition": 8,
+    "replicaDebt": 1
+  }, {
+    "partition": 9,
+    "replicaDebt": 1
+  }]
+}

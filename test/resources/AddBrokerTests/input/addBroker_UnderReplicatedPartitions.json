@@ -1,0 +1,45 @@
+{
+  "description": "3 Brokers 4 partitions 3 replicas - Try to rebalance with under replicated partitions",
+  "partitionCount": 4,
+  "task": "RebalanceCluster",
+  "rackAware": false,
+  "errorExpected": true,
+  "brokers": [{
+    "id": 1,
+    "leaders": [
+      3
+    ],
+    "followers": [
+      1,
+      2
+    ]
+  }, {
+    "id": 2,
+    "leaders": [
+      1
+    ],
+    "followers": [
+      0,
+      2,
+      3
+    ]
+  }, {
+    "id": 3,
+    "leaders": [
+      2
+    ],
+    "followers": [
+      0,
+      1,
+      3
+    ]
+  }, {
+    "id": 4,
+    "leaders": [],
+    "followers": []
+  }],
+  "underReplicatedPartitions": [{
+    "partition": 0,
+    "replicaDebt": 1
+  }]
+}

@@ -1,0 +1,10 @@
+testSuiteName: DecreaseReplicationFactor
+
+# baseDir's path starts from src/test/resources
+baseDir: DecreaseRepTests
+
+description: Test cases for decreasing replication factor
+
+# include only this test case
+#include:
+# - decreaseRep1.json

@@ -1,0 +1,74 @@
+{
+  "description": "5 Brokers in 3 racks - 6 partitions 3 replicas - Add 1 more Broker with a different rack",
+  "partitionCount": 6,
+  "task": "RebalanceCluster",
+  "rackAware" : true,
+  "brokers": [
+    {
+      "id": 1,
+      "rack": "r1",
+      "leaders": [
+        0
+      ],
+      "followers": [
+        2,
+        4,
+        5
+      ]
+    },
+    {
+      "id": 2,
+      "rack": "r1",
+      "leaders": [
+        1
+      ],
+      "followers": [
+        3
+      ]
+    },
+    {
+      "id": 3,
+      "rack": "r2",
+      "leaders": [
+        2
+      ],
+      "followers": [
+        0,
+        4,
+        5
+      ]
+    },
+    {
+      "id": 4,
+      "rack": "r2",
+      "leaders": [
+        3
+      ],
+      "followers": [
+      	1
+      ]
+    },
+    {
+      "id": 5,
+      "rack": "r3",
+      "leaders": [
+  		4,
+  		5      
+      ],
+      "followers": [
+      	0,
+      	1,
+      	2,
+      	3
+      ]
+    },
+    {
+      "id": 6,
+      "rack": "r4",
+      "leaders": [
+      ],
+      "followers": [
+      ]
+    }
+  ]
+}

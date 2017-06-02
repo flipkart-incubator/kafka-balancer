@@ -1,0 +1,5 @@
+[
+  {
+    "errorMessage": "Could not reassign under replicated partition: testTopic-partition: 0, underRepCount: 1"
+  }
+]

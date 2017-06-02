@@ -1,0 +1,50 @@
+{
+  "description": "3 Brokers 4 partitions 3 replicas - Add 1 more and Balance where broker 2 has more leaders than broker 1, Race for over utilized",
+  "partitionCount": 4,
+  "task": "RebalanceCluster",
+  "rackAware" : false,
+  "brokers": [
+    {
+      "id": 1,
+      "numTotalLeaders" : 2, 
+      "leaders": [
+        0,
+        1
+      ],
+      "followers": [
+        2,
+        3
+      ]
+    },
+    {
+      "id": 2,
+      "numTotalLeaders" : 3,
+      "leaders": [
+        2,
+        3
+      ],
+      "followers": [
+        0,
+        1
+      ]
+    },
+    {
+      "id": 3,
+      "leaders": [
+      ],
+      "followers": [
+        0,
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "id": 4,
+      "leaders": [
+      ],
+      "followers": [
+      ]
+    }
+  ]
+}

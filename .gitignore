@@ -1,0 +1,15 @@
+/dependency-reduced-pom.xml
+
+.idea
+
+/target/
+
+/deb/
+
+.classpath
+
+.project
+
+*.prefs
+
+*.iml

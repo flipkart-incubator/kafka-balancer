@@ -1,0 +1,53 @@
+[{
+  "id": 1,
+  "rack": "r1",
+  "leaders": [
+    0
+  ],
+  "followers": [
+    1,
+    2,
+    3,
+    4
+  ]
+}, {
+  "id": 2,
+  "rack": "r2",
+  "leaders": [
+    1,
+    5
+  ],
+  "followers": [
+    0
+  ]
+}, {
+  "id": 3,
+  "rack": "r2",
+  "leaders": [
+    2,
+    4
+  ],
+  "followers": [
+    3
+  ]
+}, {
+  "id": 4,
+  "rack": "r3",
+  "leaders": [
+    3
+  ],
+  "followers": [
+    0,
+    1,
+    2,
+    5
+  ]
+}, {
+  "id": 5,
+  "rack": "r4",
+  "leaders": [],
+  "followers": [
+    4,
+    5
+  ]
+}]

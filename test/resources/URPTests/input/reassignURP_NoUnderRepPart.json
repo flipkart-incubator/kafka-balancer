@@ -1,0 +1,35 @@
+{
+  "description": "3 Brokers : 3 partitions : no under-replicated partitions",
+  "partitionCount": 3,
+  "task": "ReassignUnderReplicatedPartitions",
+  "rackAware": false,
+  "brokers": [{
+    "id": 1,
+    "leaders": [
+      0
+    ],
+    "followers": [
+      1,
+      2
+    ]
+  }, {
+    "id": 2,
+    "leaders": [
+      1
+    ],
+    "followers": [
+      0,
+      2
+    ]
+  }, {
+    "id": 3,
+    "leaders": [
+      2
+    ],
+    "followers": [
+      0,
+      1
+    ]
+  }],
+  "underReplicatedPartitions": []
+}

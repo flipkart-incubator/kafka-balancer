@@ -1,0 +1,5 @@
+[
+  {
+    "errorMessage": "Under replicated partitions found for the topic, clear them off before trying to balance: [partition: 0, underRepCount: 1]"
+  }
+]

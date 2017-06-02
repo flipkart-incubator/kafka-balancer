@@ -1,0 +1,5 @@
+[
+  {
+    "errorMessage": "Replica assignment failed since replica for partition:4 already exists on rack r1"
+  }
+]
