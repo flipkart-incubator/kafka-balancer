@@ -3,7 +3,9 @@
 This tool can be used to balance partitions in a topic across brokers with minimal data movement. It is also rack aware. It also supports other features like re-replicating the under replicated partitions in balanced manner and reducing the replication factor for a topic. This tool generates/executes assignment plan based on the mode passed. If topic is not specified, this will generate/execute assignment plan for all the topics in the cluster
 
 ## Usage:
-com.flipkart.fdpinfra.kafka.balancer.KafkaBalancer [-h] [--topic TOPIC] --zookeeper ZOOKEEPER [--rack-aware] (--balance-partitions | --balance-leaders | --balance-followers | --reassign-under-replicated-partitions | --set-replication-factor replicationFactor) (--generate | --execute)
+```sh
+com.flipkart.fdpinfra.kafka.balancer.KafkaBalancerMain [-h] [--topic TOPIC] --zookeeper ZOOKEEPER [--rack-aware] (--balance-partitions | --balance-leaders | --balance-followers | --reassign-under-replicated-partitions | --set-replication-factor replicationFactor) (--generate | --execute)
+```
 
 ## Modes:
 These are the five different modes of running the balancer
@@ -16,22 +18,22 @@ These are the five different modes of running the balancer
 ## Example Usages:
 1. To generate a plan for balancing leader and follower partitions for all the topics in a cluster
 ```sh
-com.flipkart.fdpinfra.kafka.balancer --zookeeper localhost:2181/kafka-balancer-test --balance-partitions --rack-aware --generate
+KafkaBalancerMain --zookeeper localhost:2181/kafka-balancer-test --balance-partitions --rack-aware --generate
 ```
 
 2. To execute a plan for balancing leader and follower partitions for all the topics in a cluster
 ```sh
-com.flipkart.fdpinfra.kafka.balancer --zookeeper localhost:2181/kafka-balancer-test --balance-partitions --rack-aware --execute
+KafkaBalancerMain --zookeeper localhost:2181/kafka-balancer-test --balance-partitions --rack-aware --execute
 ```
 
 3. To generate a plan for balancing only follower partitions for a topic named test_topic in a cluster
 ```sh
-com.flipkart.fdpinfra.kafka.balancer --zookeeper localhost:2181/kafka-balancer-test --balance-followers --topic test_topic --rack-aware --generate
+KafkaBalancerMain --zookeeper localhost:2181/kafka-balancer-test --balance-followers --topic test_topic --rack-aware --generate
 ```
 
 4. To generate a plan for reducing replication factor from 3 to 2 for a topic named test_topic in a cluster
 ```sh
-com.flipkart.fdpinfra.kafka.balancer --zookeeper localhost:2181/kafka-balancer-test --set-replication-factor 2 --topic test_topic --rack-aware --generate
+KafkaBalancerMain --zookeeper localhost:2181/kafka-balancer-test --set-replication-factor 2 --topic test_topic --rack-aware --generate
 ```
 
 5. To exeucte a plan for clearing off the under replicated partitions in a cluster. First one with considering rack awareness for partition placements and second one for a non-rack aware cluster 
