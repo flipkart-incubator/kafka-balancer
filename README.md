@@ -38,9 +38,9 @@ KafkaBalancerMain --zookeeper localhost:2181/kafka-balancer-test --set-replicati
 
 5. To exeucte a plan for clearing off the under replicated partitions in a cluster. First one with considering rack awareness for partition placements and second one for a non-rack aware cluster 
 ```sh
-com.flipkart.fdpinfra.kafka.balancer --zookeeper localhost:2181/kafka-balancer-test --reassign-under-replicated-partitions --rack-aware --execute
+KafkaBalancerMain --zookeeper localhost:2181/kafka-balancer-test --reassign-under-replicated-partitions --rack-aware --execute
 
-com.flipkart.fdpinfra.kafka.balancer --zookeeper localhost:2181/kafka-balancer-test --reassign-under-replicated-partitions --execute
+KafkaBalancerMain --zookeeper localhost:2181/kafka-balancer-test --reassign-under-replicated-partitions --execute
 ```
 
 ## Contributors:
